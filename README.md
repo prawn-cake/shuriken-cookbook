@@ -37,7 +37,7 @@ Main objective of commands configuration is to provide check commands for agent 
 
 Examples are provided in `attributes/shuriken_config.rb`
 
-There is server definition block:
+There is monitored server definition block:
 
 ```ruby
     "localhost" => {
@@ -67,7 +67,7 @@ The block above includes several parameters
 Usage
 -----
 - Configure all attribute agent and server parameters;
-- Configure check commands configuration
+- Define check commands configurations in `attributes/shuriken_config.rb` (`"shuriken": {"config": {...}}` in a role)
 - Add `'recipe[shuriken]'` to your run_list in a role;
 - Add role to a server;
 
