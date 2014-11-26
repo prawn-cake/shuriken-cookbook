@@ -1,0 +1,11 @@
+{
+  "server": {
+    "host": "<%= node[:shuriken][:server][:host] %>",
+    "port": <%= node[:shuriken][:server][:port] %>,
+    "location": "push_check_result",
+    "username": "<%= node[:shuriken][:server][:username] %>",
+    "password": "<%= node[:shuriken][:server][:password] %>"
+  },
+  "plugins_dirs": <%= node[:shuriken][:plugins_dirs] %>,
+  "commands": <%= @commands %>
+}

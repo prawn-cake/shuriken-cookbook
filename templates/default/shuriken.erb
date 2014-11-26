@@ -1,0 +1,4 @@
+#!/bin/bash
+# Bash wrapper for shuriken command file
+
+<%= @PYTHON %> <%= @SHURIKEN_HOME %>/lib/python`<%= @PYTHON %> -c "import sys; print('{}.{}'.format(sys.version_info.major, sys.version_info.minor))"`/site-packages/shuriken/agent.py "$@"
