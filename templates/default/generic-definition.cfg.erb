@@ -1,0 +1,10 @@
+<% @entities.each do |conf| -%>
+
+define <%= @type %>{
+<% conf.each do |key, value| -%>
+  <%= key %> <%= value %>
+<% end -%>
+}
+
+<% end -%>
+

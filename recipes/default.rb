@@ -69,9 +69,9 @@ end
 # Setting up shuriken config
 require 'json'
 
-shuriken_config_path = "#{node[:shuriken][:home]}/shuriken_config.json"
+shuriken_config_path = "#{node[:shuriken][:home]}/config.json"
 template shuriken_config_path do
-    source      "shuriken_config.json.erb"
+    source      "config.json.erb"
     owner       node[:shuriken][:user]
     group       node[:shuriken][:group]
     mode        0644
