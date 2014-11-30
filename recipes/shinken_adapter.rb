@@ -15,7 +15,7 @@ node[:shuriken][:config].each do |hostname, params|
         :alias          => hostname,
         :address        => hostname,
         :check_command  => '_echo',
-        :register       => 0
+        :register       => 1
     }
     
     # TODO: add freshness parameter
@@ -39,8 +39,9 @@ node[:shuriken][:config].each do |hostname, params|
             :service_description    => svc_name,
             :passive_checks_enabled => 1,
             :check_command          => '_echo',
-            :register               => 0
-        })
+            :contact_groups         => 'admins',
+            :register               => 1
+        }.merge(node[:shinken][:service_defaults]))
     end
 
     template "#{node[:shinken][:settings]}/services/#{hostname}.cfg" do
