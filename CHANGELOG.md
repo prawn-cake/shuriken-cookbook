@@ -3,9 +3,14 @@ shuriken CHANGELOG
 
 This file is used to list changes made in each version of the shuriken cookbook.
 
+0.2.0
+-----
+- [prawn-cake] - Added shinken adapter recipe to generate hosts and services configurations by shuriken config
+
+
 0.1.0
 -----
-- [your_name] - Initial release of shuriken
+- [prawn-cake] - Initial release of shuriken cookbook
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
