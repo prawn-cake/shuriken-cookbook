@@ -35,7 +35,7 @@ Monitoring check commands configuration
 ---------------------------------------
 Main objective of commands configuration is to provide check commands for agent as json config file.
 
-Examples are provided in `attributes/shuriken_config.rb`
+Examples are provided at `attributes/config.rb`
 
 There is monitored server definition block:
 
@@ -67,9 +67,13 @@ The block above includes several parameters
 Usage
 -----
 - Configure all attribute agent and server parameters;
-- Define check commands configurations in `attributes/shuriken_config.rb` (`"shuriken": {"config": {...}}` in a role)
+- Define check commands configurations in `attributes/config.rb` (`"shuriken": {"config": {...}}` in a role)
 - Add `'recipe[shuriken]'` to your run_list in a role;
 - Add role to a server;
+
+Shinken adapter recipe
+-----------------------
+Recipe is must used on server side as a last one in a run_list. Recipe parses `node[:shuriken][:config]` as hosts and services and generate new configurations for it and put it onto a server, that means all default and other server attriubutes is read from `node[:shinken]` and other server [cookbook](https://github.com/prawn-cake/shinken-cookbook.git) related files.
 
 Contributing
 ------------
